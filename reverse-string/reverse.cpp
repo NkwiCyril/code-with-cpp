@@ -10,6 +10,10 @@ void reverse(string String) {
 }
 
 int main () {
-	reverse("Hello Sir!");
+    string String;
+    cout << "Enter string you wish to reverse: ";
+    getline(cin, String);
+	reverse(String);
+    
 	return 0;
 }
