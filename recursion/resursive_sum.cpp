@@ -9,4 +9,5 @@ int sum(int k) {
 
 int main() {
     cout << sum(2);
+    return 0;
 }
