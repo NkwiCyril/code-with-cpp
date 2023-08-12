@@ -18,6 +18,7 @@ int main() {
 	cout << "Year of Production: " << endl;
 	cin >> car1.year;
 	
+	car car2;
 	cout << "\tProperties of Car 2" << endl;
 	cout << "Enter Car Brand: " << endl;
 	cin >> car2.brand;
