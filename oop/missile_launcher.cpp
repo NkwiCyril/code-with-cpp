@@ -1,4 +1,5 @@
 #include <iostream>
+#include <windows.h>
 using namespace std;
 
 class missileLauncher{
@@ -28,11 +29,19 @@ int main() {
 	
 	switch(option) {
 		case 0:
-        for (in)
-			launch.launcher(option);
+        for (int i = 0; i < 5; i++) {
+            launch.launcher(option);
+            Sleep(1000);
+        }
+        cout << "Succesfully Launched!!";
 			break;
 		case 1:
-			launch.launcher(option);
+        for (int i = 0; i < 5; i++) {
+            launch.launcher(option);
+            Sleep(1000); 
+        }
+
+        cout << "Launch Aborted!!";
 			break;
 		default:
 			cout << "Invalid Option!!";
