@@ -18,8 +18,9 @@ int main() {
 	cout << "Enter the denominator: ";
 	cin >> denom;
 
+	// additional functionalities
 	if (num <= denom) {
-		cout << "Fraction Not Improper. numerator !> denominator" << "\n";
+		cout << "Fraction Not Improper. numerator !> denominator" << "\n\n";
 	} else {
 		cout << "Improper Fraction: ";
 		cout << improper.numerator << "/" << improper.denominator;

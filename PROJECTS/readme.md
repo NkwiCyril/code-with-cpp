@@ -13,3 +13,8 @@ as objects that belong to the class called Fraction.
 
 ## Project 2 Explanation (parkville_bank_software)
 
+- Parkville Bank is a full-service bank that has decided to computerize its banking processes.
+- One object needed is a BankAccount. Develop a struct so that it contains public data fields
+that hold the int account number and double account balance. 
+- (In later chapters, you will convert BankAccount to a class and learn to make these data fields private.) 
+- Write a main() function that declares a BankAccount and allows you to enter data values for the BankAccount fields. Echo the input. Save the file as BankAccount.cpp.
