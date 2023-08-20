@@ -8,22 +8,23 @@ using namespace std;
 // Of course, these credentials are going to bee private and hence would need a way to be accessed by the authorized users. 
 // This is where I will require the concept of encapsulation
 
+// Let me make in such a way that only three commanders are able to get access to the missile launch system
+
 class credential {
 	private:
 		string username;
 		int passcode;
-	
 	public:
 		void setUsername(string name) {
 			username = name;
 		}
-		void getUsername() {
+		string getUsername() {
 			return username;
 		}
 		void setPasscode(int code) {
 			passcode = code;
 		}
-		void getPasscode() {
+		int getPasscode() {
 			return passcode;
 		}		
 		
@@ -38,57 +39,70 @@ class missileLauncher{
 				cout << "Aborting Missile Launch";
 			}
 		}
-		void fullStop() {
-			cout << ".";
-		}
 };
 
-int main() {
-	
+void pending(int n, int t, string sym) {
+	for (int i = 0; i <= n; i++) {
+		cout << sym;
+		Sleep(t);
+	}
+	cout << endl << endl;
+
+}
+
+void instruction() {	
 	missileLauncher launch;
-	
+
 	cout << "\tWelcome to Missile Launch Control" << endl;
 	cout << "Choose from the options below to initialize launch." << endl;
 	cout << "Options:" << endl;
 	cout << "0: Launch Missile" << endl;
-	cout << "1: Abort Missile Launch" << "\n\n";
-	
+	cout << "1: Abort Missile Launch" << "\n\n";	
+
 	int option;
 	cout << "Enter your option: ";
 	cin >> option;
 	
 	switch(option) {
 		case 0:
-            launch.launcher(option);
-            Sleep(1000);
-            launch.fullStop();
-            Sleep(1000);
-            launch.fullStop();
-            Sleep(1000);
-            launch.fullStop();  
-			Sleep(1000);  
-			cout << "\n";        
-	        cout << "Succesfully Launched";
-	        
+			launch.launcher(option);
+			pending(3, 500, ".");
+			cout << "Succesfully Launched";
+				
 			break;
 		case 1:
-            launch.launcher(option);
-            Sleep(1000);
-            launch.fullStop();
-            Sleep(1000);
-            launch.fullStop();
-            Sleep(1000);
-            launch.fullStop();  
-			Sleep(1000);  
-			cout << "\n";  
-        	cout << "Launch Aborted";
-        	
+			launch.launcher(option);
+			pending(3, 500, ".");   
+			cout << "Launch Aborted";
+				
 			break;
-		default:
-			cout << "Invalid Option!!";
-			break;
+			default:
+				cout << "Invalid Option!!";
+				break;
+		}
+}
+
+int main() {
+ 	
+ 	credential user;
+ 
+	pending(55, 50, "#");
+	string username;
+	int passcode;
+	cout << "\tCYRIX MILITARY TECH UNIT" << "\n";
+	cout << "ENTER THE FOLLOWING CREDENTIALS TO GAIN ACCESS" << "\n";
+	cout << "YOU HAVE A SINGLE TRY!" << "\n\n";
+	cout << "Username: ";
+	cin >> username;
+	cout << "Passcode: ";
+	cin >> passcode;
+	
+	if(username == "Heroku" && passcode == 25542) {
+		cout << "\n";
+		instruction();
+	} else {
+		cout << "Invalid Credentials Inserted." << endl;
+		cout << "Sorry! You cannot access the missile launch sequence";
 	}
-	
 	return 0;
-	
 }
