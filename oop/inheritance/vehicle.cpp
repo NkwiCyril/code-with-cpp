@@ -25,7 +25,7 @@ class SubCar:public Car {
 
 int main() {
     Car car;
-    Subcar c1;
+    SubCar c1;
     cout << "Brand: " << car.brand << endl;
     cout << "Model: " << car.model << endl << endl;
 
