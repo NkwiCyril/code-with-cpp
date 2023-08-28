@@ -11,7 +11,7 @@ class Employee{
         void setHourlyRate(const double rate);
 
         int getIdNum();
-        int getHourlyRate();
+        double getHourlyRate();
 };
 
 void Employee::setIdNum(const int id) {
