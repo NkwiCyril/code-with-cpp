@@ -33,21 +33,21 @@ double Employee::getHourlyRate() {
 
 int main() {
 
-    Employee employee;
+    Employee assistant;
     
     int num, hour;
     
-    cout << "Enter employee number: ";
+    cout << "Enter assistant number: ";
     cin >> num;
-    employee.setIdNum(num);
-    cout << "Enter employee hourly rate: ";
+    assistant.setIdNum(num);
+    cout << "Enter assistant hourly rate: ";
     cin >> hour;
-    employee.setHourlyRate(hour);
+    assistant.setHourlyRate(hour);
     cout << endl << endl;
     
     cout << "Details Input" << endl;
-    cout << "Employee Number: " << employee.getIdNum() << endl;
-    cout << "Employee Hourly Rate: " << employee.getHourlyRate();
+    cout << "Employee Number: " << assistant.getIdNum() << endl;
+    cout << "Employee Hourly Rate: " << assistant.getHourlyRate();
 
 	return 0;
 }
