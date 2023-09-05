@@ -11,7 +11,16 @@ int power(int base, int exp) {
 }
 
 int main() {
-	cout << power(2,3);
+	int base;
+	int exp;
+	
+	cout << "Enter the base: ";
+	cin >> base;
+	cout << "Enter the exponent: ";
+	cin >> exp;
+	cout << endl;
+	cout << base << " raised to the power " << exp << ": ";
+	cout << power(base, exp);
 	
 	return 0;
 }
