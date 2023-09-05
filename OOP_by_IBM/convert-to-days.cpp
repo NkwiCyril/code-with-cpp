@@ -2,51 +2,46 @@
 
 using namespace std;
 
-void convertNumToDays() {
-
-    int num;
-    cout << "Input number: ";
-    cin >> num;
+string convertNumToDays(int num) {
 
     switch(num) {
         case 1:
-        cout << "Monday";
+        return "Monday";
         break;
 
         case 2:
-        cout << "Tuesday";
+        return "Tuesday";
         break;
 
         case 3:
-        cout << "Wednesday";
+        return "Wednesday";
         break;
 
         case 4:
-        cout << "Thursday";
+        return "Thursday";
         break;
 
         case 5:
-        cout << "Friday";
+        return "Friday";
         break;
 
         case 6:
-        cout << "Saturday";
+       	return "Saturday";
         break;
 
         case 7:
-        cout << "Sunday";
+        return "Sunday";
         break;
 
         default:
-        cout << "Invalid Number!";
+        return "Invalid Number!";
 
     }
 
 }
 
 int main() {
-    
-	convertNumToDays();
+	cout << convertNumToDays(7);
 	
 	return 0;
 }
