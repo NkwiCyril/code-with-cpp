@@ -2,6 +2,10 @@
 
 using namespace std;
 
+// Polymorphism means "many forms", 
+// and it occurs when we have many classes that are related to each other by inheritance.
+// it allows us perform a single action in different ways
+
 class Animal{
 	public:
 		void animalSound() {
